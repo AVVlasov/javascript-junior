@@ -1,0 +1,16 @@
+{
+  "name": "04_lint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:ts": "tslint src/**/*.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  }
+}
