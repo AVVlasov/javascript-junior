@@ -1,0 +1,31 @@
+{
+    "extends": ["tslint:recommended"],
+    "rules": {
+      "no-any": true,
+      "type-literal-delimiter": true,
+      "ordered-imports": [ true, { "import-sources-order": "lowercase-first" } ],
+      "object-literal-sort-keys": false,
+      "member-access": false,
+      "eofline": true,
+      "no-trailing-whitespace": true,
+      "jsx-no-lambda": false,
+      "jsx-boolean-value": false,
+      "indent": [true, "spaces", 4],
+      "interface-name": [true, "always-prefix"],
+      "no-console": [true, "log", "error"],
+      "no-debugger": true,
+      "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
+      "semicolon": [true, "always"],
+      "space-before-function-paren": [true, { "asyncArrow": "always", "named": "never" }],
+      "import-spacing": true,
+      "no-consecutive-blank-lines": true,
+      "newline-before-return": true,
+      "max-line-length": [true, {"limit": 130, "ignore-pattern": "^import |^export |@prop"}],
+      "no-namespace": false,
+      "quotemark": [
+        true,
+        "single",
+        "jsx-double"
+      ]
+    }
+}
