@@ -1,0 +1,158 @@
+.App {
+  text-align: center;
+  background-color: #0D324D;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.count {
+	font-size: 32px;
+	font-weight: 600;
+}
+.button {
+	padding: 20px 30px;
+	font-size: 40px;
+	cursor: pointer;
+	position: relative;
+	border: 2px solid white;
+	outline: none;
+	color: white;
+	background-color: transparent;
+	margin: 40px;
+	font-family: 'Merriweather', serif;
+	white-space: nowrap;
+
+	&--border {
+		&::after,
+		&::before,
+		span::after,
+		span::before {
+			content: "";
+			position: absolute;
+			background-color: white;
+			transition: 0.5s ease;
+		}
+		&::after,
+		&::before {
+			height: 100%;
+			width: 2px;
+			top: -2px;
+		}
+		&::after {
+			left: -2px;
+		}
+		&::before {
+			right: -2px;
+		}
+		span::after,
+		span::before {
+			height: 2px;
+			width: 100%;
+			left: -2px;
+		}
+		span::after {
+			top: -2px;
+		}
+		span::before {
+			bottom: -2px;
+		}
+		&:hover:after {
+			transform: translatex(-12px);
+		}
+		&:hover:before {
+			transform: translatex(12px);
+		}
+		&:hover span::after {
+			transform: translatey(-12px);
+		}
+		&:hover span::before {
+			transform: translatey(12px);
+		}
+	}
+	&--swap {
+		span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 20px 30px;
+			font-size: 40px;
+			box-sizing: border-box;
+			opacity: 0;
+			color: black;
+			transition: 0.35s ease;
+		}
+		&::before {
+			content: "";
+			left: 0;
+			top: 0;
+			position: absolute;
+			width: 0;
+			height: 100%;
+			background-color: white;
+			transition: 0.5s ease;
+		}
+		&:hover {
+			&:before {
+				width: 100%;
+			}
+			span {
+				opacity: 1;
+			}
+		}
+	}
+	&--future {
+		&::after, &::before {
+			content: "";
+			position: absolute;
+			border: 2px solid white;
+			width: calc(100% + 15px);
+			height: 60px;
+			transition: 0.5s ease;
+		}
+		&::after {
+			top: -15px;
+			left: -15px;
+			border-right: none;
+			border-bottom: none;
+		}
+		&::before {
+			bottom: -15px;
+			right: -15px;
+			border-left: none;
+			border-top: none;
+		}
+		&:hover:after, &:hover:before {
+			width: calc(100% - 30px);
+			height: 80px;
+		}
+	}
+}
